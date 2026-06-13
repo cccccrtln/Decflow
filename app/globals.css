@@ -1,0 +1,90 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-body:
+    "Source Han Sans SC",
+    "Noto Sans SC",
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    sans-serif;
+  --font-title:
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    "Songti SC",
+    "STSong",
+    "Iowan Old Style",
+    "Palatino Linotype",
+    serif;
+  --font-label:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    serif;
+  --font-reader:
+    "Noto Serif SC",
+    "Songti SC",
+    "Source Han Serif SC",
+    "STSong",
+    "Iowan Old Style",
+    "Palatino Linotype",
+    serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink;
+  font-family: var(--font-body);
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+  font-weight: 430;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.panel {
+  @apply rounded-3xl border border-black/10 bg-white/80 shadow-[0_18px_55px_rgba(118,101,74,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] backdrop-blur;
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(250, 252, 250, 0.74)),
+    radial-gradient(circle at 16% 8%, rgba(174, 204, 187, 0.18), transparent 28%),
+    radial-gradient(circle at 92% 80%, rgba(169, 184, 210, 0.14), transparent 30%);
+}
+
+[data-font-role="title"] {
+  font-family: var(--font-title);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+[data-font-role="label"] {
+  font-family: var(--font-label);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+[data-font-role="body"] {
+  font-family: var(--font-body);
+  font-weight: 430;
+}
+
+[data-font-role="reader"] {
+  font-family: var(--font-reader);
+  font-weight: 430;
+  letter-spacing: 0.025em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
